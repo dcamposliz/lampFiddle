@@ -6,7 +6,7 @@ function showHint(str){
 		var ajaxCall = new XMLHttpRequest();
 		ajaxCall.onreadystatechange = function(){
 			if(ajaxCall.readyState == 4 && ajaxCall.status == 200){
-				documentGetElementById("txtHint").innerHTML = ajaxCall.responseText;
+				document.GetElementById("txtHint").innerHTML = ajaxCall.responseText;
 			}
 		};
 		ajaxCall.open("GET", "getHint.php?q=" + str, true);
